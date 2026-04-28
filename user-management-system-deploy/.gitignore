@@ -1,0 +1,64 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Docker & Compose (Keep base files, ignore only local override configs)
+docker-compose.override.yml
+.docker/
+
+# Database Data (Prevent local database data from being committed)
+mysql_data/
+postgres_data/
+redis_data/
+mongodb_data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Sensitive Configuration
+*.key
+*.pem
+*.p12
+*.jks
+secrets.yml
+secrets.json
+credentials.yml
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Temporary Files
+*.tmp
+*.temp
+*~
+.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.iml
+
+# Backup Files
+*.backup
+*.bak
+*.sql.bak
+
+# Build Artifacts (Industry Standard: Do not commit frontend builds or backend Jar files)
+frontend/dist/
+backend/dist/
+backend/target/
+backend/*.jar

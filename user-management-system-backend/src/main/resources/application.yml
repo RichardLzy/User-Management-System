@@ -1,0 +1,25 @@
+# Common Configuration File
+spring:
+  application:
+    name: user-center-backend
+  # DataSource Config
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://172.17.0.1:3306/user_management_system
+    username: root
+    password: root
+  # Session timeout
+  session:
+    timeout: 86400
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+  global-config:
+    db-config:
+      logic-delete-field: isDelete # Global logical delete field name (since 3.3.0, you can ignore step 2 after configuration)
+      logic-delete-value: 1 # Logic deleted value (default 1)
+      logic-not-delete-value: 0 # Logic not deleted value (default 0)

@@ -1,0 +1,10 @@
+# 1. Ignore OS-generated temporary files
+.DS_Store
+Thumbs.db
+
+# 2. Ignore IDE configurations when opening the project from the root
+.idea/
+.vscode/
+
+# 3. Ignore sensitive environment credentials in the deployment module
+user-management-system-deploy/.env
